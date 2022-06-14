@@ -1,14 +1,14 @@
 import React from 'react'
 import { SafeAreaView, Text } from 'react-native';
-import styles from "./Anasayfa.style";
+import styles from "./EtkinlikDetay.style";
 import theme from '../../theme';
 
-const Anasayfa = () => {
+const EtkinlikDetay = () => {
     return (
        <SafeAreaView>
-        <Text>Anasayfa</Text>
+        <Text>EtkinlikDetay</Text>
         </SafeAreaView>
     )
 }
 
-export default Anasayfa;
+export default EtkinlikDetay;

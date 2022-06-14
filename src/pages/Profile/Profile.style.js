@@ -1,13 +1,17 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native';
+import theme from '../../theme';
 
 export default StyleSheet.create({
-    container: {
-        padding: 10,
-        flexDirection: 'row',
-    },
-    image: {
-        width: 100,
-        height: 100,
-        borderRadius: 50,
-    }
-})
+  container: {
+    flexDirection: 'column',
+    flex: 1,
+  },
+  banner: {
+    height: 200,
+    backgroundColor: theme.palette.darkGreen,
+  },
+  profile_image: {
+    height: 100,
+    width: 100,
+  },
+});

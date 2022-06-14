@@ -1,18 +1,19 @@
 import { StyleSheet } from "react-native";
+import theme from '../../theme'
 
 
 export default StyleSheet.create({
     container: {
-        backgroundColor: '#0BAB64',
+        backgroundColor: theme.palette.darkGreen,
         borderRadius: 25,
-        padding: 10,
+        padding: 15,
         margin: 10,
         alignItems: 'center',
         justifyContent: 'center',
     },
     text: {
         color: 'white',
-        fontSize: 15,
-        fontFamily: 'Montserrat-Medium',
+        fontSize: 18,
+        fontFamily: 'Montserrat-Bold',
     },
 })
