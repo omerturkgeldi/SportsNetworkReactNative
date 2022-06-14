@@ -9,8 +9,9 @@ import SignUp from "./pages/SignUp";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import { createDrawerNavigator  } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Anasayfa from './pages/Anasayfa/Anasayfa';
-
+import Home from './pages/Home';
+import KayitOl from './pages/KayitOl/KayitOl'
+import GirisYap from './pages/GirisYap/GirisYap';
 
 const Stack = createNativeStackNavigator();
 // const Drawer = createDrawerNavigator();
@@ -31,10 +32,13 @@ const Router = () => {
             <Stack.Screen name="WelcomeScreen" component={Welcome} options={{
                     headerShown: false,
                 }} />
-                <Stack.Screen name="MemberSignScreen" component={SignUp}/>
+                <Stack.Screen name="GirisYapScreen" component={GirisYap} options={{ title: "Giriş Yap", headerBackVisible: true}} />
+                <Stack.Screen name="KayitOlScreen" component={KayitOl} options={{ title: "Üye Ol"}} />
                 <Stack.Screen name='MessagesPage' component={Message} />
                   <Stack.Screen name='ProfilePage' component={Profile} />
-                  <Stack.Screen name='MainPage' component={Anasayfa} options={{ headerShown: false }}/>
+                  <Stack.Screen name='MainPage' component={Home} options={{
+                    headerShown: false,
+                }}/>
                 {/* <Stack.Screen name='DetailPage' component={Detail} /> */}
             </Stack.Navigator>
         </NavigationContainer>

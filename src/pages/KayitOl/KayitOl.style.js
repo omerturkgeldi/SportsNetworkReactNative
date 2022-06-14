@@ -5,15 +5,15 @@ export default StyleSheet.create({
         backgroundColor: 'white',
         display: 'flex',
         flex: 1,
-    }, 
-    titles_container: {
+    },
+    titles_container:{
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around'
     },
     title: {
-        marginLeft: 60,
+        marginLeft: 70,
         padding: 10,
         marginTop: 20,
         marginBottom: 10,
@@ -30,7 +30,7 @@ export default StyleSheet.create({
         marginVertical: 10,
         textAlign: 'center',
     },
-    kayit_ol:{
+    giris_yap:{
         color: "#5DB075",
         fontSize: 16,
         marginTop: 12,

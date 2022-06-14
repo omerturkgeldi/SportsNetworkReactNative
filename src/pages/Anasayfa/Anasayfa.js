@@ -1,62 +1,38 @@
 import React from 'react'
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, Text, Image } from 'react-native';
 import styles from "./Anasayfa.style";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
-import Profile from '../Profile/Profile';
-import Message from '../Message/Message';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import IconFeather from 'react-native-vector-icons/Feather';
+import theme from '../../theme';
+// import MapView from 'react-native-maps';
+
+
+const etkinlikler_list = [
+    {
+      id: 1,
+      image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaeQDEx9cvmWcHFbCbuPMQPqFcfYlUpkgncg&usqp=CAU",
+      baslik: 'Masa Tenisi',
+      aciklama: "Timo Boll ile Bostanlı'da masa tenisi oynadı.",
+    },
+    {
+      id: 2,
+      image_url: "https://i.cnnturk.com/i/cnnturk/75/740x416/5f831e10d265a21b482d8315.jpg",
+      baslik: 'Tenis',
+      aciklama: "Rafael Nadal ile Örnekköy'de tenis oynadı.",
+    },
+    {
+      id: 3,
+      image_url: "https://img.fanatik.com.tr/img/75/0x0/619259cdae298b9e9e6bc6c8.jpg",
+      baslik: 'İzmir Maratonu',
+      aciklama: "İzmir Maratonu'nda koştu.",
+    },
+  ];
 
 
 const Anasayfa = () => {
-    function goToProfile() {
-        navigation.navigate('ProfilePage')
-    }
-    function goToMessages() {
-        navigation.navigate('MessagesPage')
-    }
-    function goToMainPage() {
-        navigation.navigate('MainPage')
-    }
-    const Tab = createBottomTabNavigator();
-
     return (
-        <NavigationContainer independent={true}>
-            <Tab.Navigator
-                screenOptions={({ route }) => ({
-                    tabBarIcon: ({ focused, color, size }) => {
-                        if (route.name === 'ProfilePage') {
-                            return (
-                                <Icon name="rocket" size={30} color="#900" />
-                            );
-                        } else if (route.name === 'MessagesPage') {
-                            return (
-                                <IconFeather
-                                    name={focused ? 'message-circle' : 'message-circle'}
-                                    size={size}
-                                    color={color}
-                                />
-                            );
-                        }else if (route.name === 'MainPage') {
-                            return (
-                                <IconFeather
-                                    name={focused ? 'home' : 'home'}
-                                    size={size}
-                                    color={color}
-                                />
-                            );
-                        }
-                    },
-                    tabBarInactiveTintColor: 'gray',
-                    tabBarActiveTintColor: 'tomato',
-                })}
-            >
-                <Tab.Screen name="MainPage" component={Anasayfa} />
-                <Tab.Screen name="ProfilePage" component={Profile} />
-                <Tab.Screen name="MessagesPage" component={Message} />
-            </Tab.Navigator>
-        </NavigationContainer>
+       <SafeAreaView>
+         {/* <MapView style={styles.map} /> */}
+        <Text>Anasayfa</Text>
+        </SafeAreaView>
     )
 }
 
